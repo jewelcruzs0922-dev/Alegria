@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Shopify CLI
+.shopify/
+theme/.shopify/
+
+# Environment / secrets — never commit
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Local scratch
+.captures/
+tmp/

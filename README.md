@@ -1,0 +1,99 @@
+# Alegria — Shopify Furniture & Interiors Storefront
+
+A **portfolio-only** Shopify storefront for **Alegria**, a fictional premium furniture and home-interiors brand. Built on **Shopify Online Store 2.0** (Dawn base) to demonstrate professional Shopify theme development: Liquid, JSON templates, custom sections, product variants, metafields & metaobjects, collection filtering, an Ajax cart, accessibility, SEO and performance.
+
+**Live demo:** https://alegria-desoau8q.myshopify.com/ — *password-protected dev store; ask me for access.*
+This is a fictional brand — there are **no real products, customers or payments** (checkout uses Shopify's test gateway).
+
+![Alegria homepage](docs/screenshots/home-desktop.png)
+
+---
+
+## Highlights
+
+- **Custom editorial hero** (`sections/alegria-hero.liquid`) — full-bleed image, eyebrow, heading, CTA, with height/position/overlay controls.
+- **Reusable editorial section** (`sections/alegria-editorial.liquid`) — split image/text, image side configurable.
+- **Specifications section** (`sections/alegria-product-specs.liquid`) — renders product **metafields** and a linked **metaobject** (Material) on the product page, handling missing values gracefully.
+- **16 products across 5 collections** with real options/variants, variant-aware pricing and images.
+- **Native collection filtering & sorting** (Shopify Search & Discovery) with a mobile filter drawer.
+- **Ajax cart drawer** (Dawn) — add, update, remove, live count and subtotal.
+- **Journal** blog with three editorial articles.
+- **Brand design system** — Crimson `#CE2029`, Charcoal `#232323`, Metallic Gold `#D4AF37` on an ivory base; Playfair Display headings + Jost body.
+- **AI-generated imagery** (Gemini) uploaded to Shopify Files.
+
+| Product page | Mobile |
+| --- | --- |
+| ![Product](docs/screenshots/product-desktop.png) | ![Mobile](docs/screenshots/home-mobile.png) |
+
+## Catalog
+
+**Collections:** Seating · Tables & Desks · Lighting · Storage · Home Accessories
+
+| Collection | Products |
+| --- | --- |
+| Seating | Larkin Lounge Chair, Marlow 3-Seat Sofa, Ottoline Accent Chair, Bramble Ottoman |
+| Tables & Desks | Oslo Dining Table, Linden Coffee Table, Wren Writing Desk |
+| Lighting | Vane Floor Lamp, Halo Pendant Light, Ember Table Lamp |
+| Storage | Rowan Shelving Unit, Kestrel Cabinet, Nook Sideboard |
+| Home Accessories | Aria Wool Throw, Terra Stoneware Vase, Luca Brass Mirror |
+
+Products use real Shopify variants (Upholstery / Size / Finish / Colour …) with variant-specific pricing.
+
+## Structured content (metafields & metaobjects)
+
+- **Metaobject `alegria_material`** (Title, Description, Care) — 5 reusable entries (Solid Oak, Walnut, Travertine, Wool & Linen, Brushed Brass).
+- **Product metafields** (namespace `alegria`): `material` (metaobject reference), `dimensions`, `assembly`, `warranty`.
+- See [`docs/setup-guide.md`](docs/setup-guide.md) for exact definitions and how to recreate them.
+
+## Theme architecture
+
+```
+theme/
+  layout/        theme.liquid (brand CSS injected after base.css)
+  templates/     index.json, product.json, collection.json, blog.json, article.json, …
+  sections/      alegria-hero, alegria-editorial, alegria-product-specs (+ Dawn sections)
+  snippets/      Dawn snippets (+ quantity-input label fix)
+  assets/        alegria.css (brand layer) + Dawn assets
+  config/        settings_schema.json, settings_data.json (5 brand colour schemes)
+  locales/       translations
+docs/            setup guide, screenshots
+scripts/         catalog tooling used to build the demo
+PROJECT.md       chronological build log
+```
+
+## Tech stack
+
+**Shopify Online Store 2.0** · **Liquid** · JSON templates · **JavaScript** (Dawn web components) · **HTML/CSS**. Theme base: **Dawn**. Tooling: **Shopify CLI 4.9.3** (`theme push/publish/check`).
+
+## Local development
+
+```bash
+# requires Node.js and Shopify CLI
+npm install -g @shopify/cli
+shopify auth login --store alegria-desoau8q.myshopify.com
+cd theme
+shopify theme dev --store alegria-desoau8q.myshopify.com   # live local preview
+shopify theme check                                       # lint
+shopify theme push --theme "Alegria" --store alegria-desoau8q.myshopify.com
+```
+
+## Testing
+
+- **Theme Check:** 0 errors (Dawn base warnings only).
+- **axe-core:** homepage, collection and product pages **clean** (only the admin preview-bar iframe is flagged, which does not exist on the live store).
+- **Lighthouse (mobile, live theme):** Accessibility **97** · SEO **92** · Best Practices **73** · Performance **54** (FCP 4.8s, LCP 8.2s, CLS 0).
+  - Performance / Best Practices are dominated by **Shopify platform scripts** (Web Pixels, analytics, account) rather than the theme; the hero image is prioritised and below-the-fold images lazy-loaded.
+- Verified: variant selection (price + availability), add-to-cart, collection filtering/sorting, navigation, journal, responsive layout (no horizontal overflow at 390px).
+
+## Known limitations
+
+- Development store — storefront is **password-protected**; checkout uses Shopify's **test gateway** (no real payments).
+- Performance is bounded by Shopify's platform JavaScript.
+- The storefront has no customer accounts content beyond Dawn defaults.
+
+## Notes & disclaimers
+
+- Fictional "Alegria" brand; all copy, prices and imagery are illustrative.
+- Product imagery is **AI-generated** for the demo.
+- The repository contains **no secrets or credentials**.
+- Not affiliated with any real brand or business.

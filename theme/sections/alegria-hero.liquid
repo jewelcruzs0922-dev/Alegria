@@ -1,0 +1,217 @@
+{%- liquid
+  assign height_class = 'alegria-hero--' | append: section.settings.height
+  assign position_class = 'alegria-hero--' | append: section.settings.content_position
+-%}
+
+<style>
+  #shopify-section-{{ section.id }} .alegria-hero {
+    position: relative;
+    display: grid;
+    align-items: end;
+    min-height: 62vh;
+    overflow: hidden;
+    color: #f5f1ea;
+  }
+  #shopify-section-{{ section.id }} .alegria-hero--small { min-height: 46vh; }
+  #shopify-section-{{ section.id }} .alegria-hero--medium { min-height: 62vh; }
+  #shopify-section-{{ section.id }} .alegria-hero--large { min-height: 78vh; }
+  #shopify-section-{{ section.id }} .alegria-hero--full { min-height: calc(100vh - 6rem); }
+
+  #shopify-section-{{ section.id }} .alegria-hero__media,
+  #shopify-section-{{ section.id }} .alegria-hero__media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #shopify-section-{{ section.id }} .alegria-hero__media {
+    background-color: var(--alegria-charcoal);
+  }
+  #shopify-section-{{ section.id }} .alegria-hero__scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(24, 22, 20, 0.05) 0%, rgba(24, 22, 20, {{ section.settings.overlay_opacity | divided_by: 100.0 }}) 100%);
+  }
+  #shopify-section-{{ section.id }} .alegria-hero__content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: clamp(3rem, 7vw, 7rem) 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #shopify-section-{{ section.id }} .alegria-hero--left .alegria-hero__content { align-items: flex-start; text-align: left; }
+  #shopify-section-{{ section.id }} .alegria-hero--center .alegria-hero__content { align-items: center; text-align: center; }
+  #shopify-section-{{ section.id }} .alegria-hero--right .alegria-hero__content { align-items: flex-end; text-align: right; }
+
+  #shopify-section-{{ section.id }} .alegria-hero__eyebrow {
+    color: var(--alegria-gold);
+    margin: 0;
+  }
+  #shopify-section-{{ section.id }} .alegria-hero__heading {
+    font-size: clamp(3.4rem, 6vw, 6.6rem);
+    max-width: 18ch;
+    margin: 0;
+    color: #f5f1ea;
+  }
+  #shopify-section-{{ section.id }} .alegria-hero__text {
+    font-size: clamp(1.5rem, 1.7vw, 1.9rem);
+    line-height: 1.6;
+    max-width: 52ch;
+    margin: 0;
+    color: rgba(245, 241, 234, 0.86);
+  }
+  #shopify-section-{{ section.id }} .alegria-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.6rem;
+    background: var(--alegria-crimson);
+    color: #ffffff;
+    border: 1px solid var(--alegria-crimson);
+    padding: 1.6rem 3.4rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  }
+  #shopify-section-{{ section.id }} .alegria-hero__cta:hover {
+    background: var(--alegria-gold);
+    border-color: var(--alegria-gold);
+    color: var(--alegria-charcoal);
+  }
+</style>
+
+<div class="alegria-hero {{ height_class }} {{ position_class }}">
+  <div class="alegria-hero__media">
+    {%- if section.settings.image != blank -%}
+      {{
+        section.settings.image
+        | image_url: width: 3200
+        | image_tag:
+          loading: 'eager',
+          fetchpriority: 'high',
+          widths: '750, 1100, 1500, 1900, 2400, 3000',
+          sizes: '100vw',
+          alt: section.settings.image.alt | default: section.settings.heading
+      }}
+    {%- else -%}
+      {{ 'lifestyle-1' | placeholder_svg_tag: 'alegria-hero__placeholder' }}
+    {%- endif -%}
+  </div>
+  <div class="alegria-hero__scrim" aria-hidden="true"></div>
+
+  <div class="page-width">
+    <div class="alegria-hero__content">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="alegria-eyebrow alegria-hero__eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+
+      {%- if section.settings.heading != blank -%}
+        <h1 class="alegria-hero__heading">{{ section.settings.heading }}</h1>
+      {%- endif -%}
+
+      {%- if section.settings.text != blank -%}
+        <p class="alegria-hero__text">{{ section.settings.text }}</p>
+      {%- endif -%}
+
+      {%- if section.settings.button_label != blank -%}
+        <a
+          class="alegria-hero__cta"
+          {% if section.settings.button_link != blank %}
+            href="{{ section.settings.button_link }}"
+          {% else %}
+            role="link" aria-disabled="true"
+          {% endif %}
+        >
+          {{ section.settings.button_label }}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Alegria hero",
+  "tag": "section",
+  "class": "section-alegria-hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background image"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "unit": "%",
+      "label": "Bottom overlay opacity",
+      "default": 55
+    },
+    {
+      "type": "select",
+      "id": "height",
+      "label": "Height",
+      "options": [
+        { "value": "small", "label": "Small" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" },
+        { "value": "full", "label": "Full screen" }
+      ],
+      "default": "large"
+    },
+    {
+      "type": "select",
+      "id": "content_position",
+      "label": "Content position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "The Alegria Collection"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Furniture for the way you live"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Subheading",
+      "default": "Considered pieces in natural materials, made to be lived with for years."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Shop the collection"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Alegria hero"
+    }
+  ]
+}
+{% endschema %}

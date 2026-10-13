@@ -1,0 +1,114 @@
+{
+  "sections": {
+    "alegria_hero": {
+      "type": "alegria-hero",
+      "settings": {
+        "image": "shopify://shop_images/64e53bcfec09364e73e68f5c286a3310.jpg",
+        "overlay_opacity": 55,
+        "height": "large",
+        "content_position": "left",
+        "eyebrow": "The Alegria Collection",
+        "heading": "Furniture for the way you live",
+        "text": "Considered pieces in natural materials — made to be lived with for years, not seasons.",
+        "button_label": "Shop the collection",
+        "button_link": "shopify://collections/all"
+      }
+    },
+    "alegria_craft": {
+      "type": "alegria-editorial",
+      "settings": {
+        "image": "shopify://shop_images/0ffcd9db0229ec9ab0f018fbb53351ef.jpg",
+        "image_position": "left",
+        "eyebrow": "Craftsmanship",
+        "heading": "Made slowly, by people who care",
+        "text": "<p>Every Alegria piece begins with honest materials — solid oak, walnut, wool, linen and stone — shaped by makers who understand that good furniture is measured in decades, not seasons.</p><p>We keep our ranges small and our finishes natural, so each object ages gracefully in your home.</p>",
+        "link_label": "Read our story",
+        "link": "shopify://pages/about",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "alegria_new": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "New & notable",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "padding_top": 64,
+        "padding_bottom": 24
+      }
+    },
+    "alegria_room": {
+      "type": "alegria-editorial",
+      "settings": {
+        "image": "shopify://shop_images/c1351a28925ac0ded630f1da005993df.jpg",
+        "image_position": "right",
+        "eyebrow": "Room inspiration",
+        "heading": "A quiet corner, well made",
+        "text": "<p>Layer a sculptural lounge chair, a low side table and warm lamplight to create a reading corner that invites you to slow down. Our pieces are designed to sit together as easily as they stand alone.</p>",
+        "link_label": "Explore rooms",
+        "link": "shopify://pages/about",
+        "color_scheme": "scheme-2"
+      }
+    },
+    "alegria_story": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Designed to last a lifetime",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Natural materials, repairable construction and timeless forms — Alegria furniture is made to be handed down, not thrown away.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Discover the collection",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "alegria_hero",
+    "alegria_craft",
+    "alegria_new",
+    "alegria_room",
+    "alegria_story"
+  ]
+}

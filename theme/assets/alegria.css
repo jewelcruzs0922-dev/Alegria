@@ -1,0 +1,266 @@
+/* ==========================================================================
+   Alegria — brand design system
+   Crimson · Charcoal · Metallic Gold, layered over the Dawn base theme.
+   ========================================================================== */
+
+:root {
+  --alegria-ivory: #faf7f2;
+  --alegria-sand: #f0ebe3;
+  --alegria-line: #e6e0d6;
+  --alegria-stone: #6b6660;
+  --alegria-charcoal: #232323;
+  --alegria-crimson: #ce2029;
+  --alegria-gold: #d4af37;
+
+  --alegria-space-section: clamp(4rem, 8vw, 9rem);
+  --alegria-tracking-wide: 0.18em;
+}
+
+/* --------------------------------------------------------------------------
+   Base typography
+   -------------------------------------------------------------------------- */
+
+body {
+  background-color: var(--alegria-ivory);
+  color: var(--alegria-charcoal);
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h0,
+.h1,
+.h2,
+.h3 {
+  font-family: var(--font-heading-family);
+  font-weight: var(--font-heading-weight);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.alegria-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body-family);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: var(--alegria-tracking-wide);
+  text-transform: uppercase;
+  color: var(--alegria-crimson);
+  margin-bottom: 1.6rem;
+}
+
+.alegria-rule {
+  border: 0;
+  border-top: 1px solid var(--alegria-line);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Page width + section rhythm
+   -------------------------------------------------------------------------- */
+
+.page-width {
+  max-width: 1400px;
+}
+
+.shopify-section {
+  scroll-margin-top: 8rem;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons — squared, crimson, generous tracking
+   -------------------------------------------------------------------------- */
+
+.button,
+.shopify-payment-button__button--unbranded {
+  font-family: var(--font-body-family);
+  font-size: 1.3rem;
+  letter-spacing: var(--alegria-tracking-wide);
+  text-transform: uppercase;
+  padding: 1.6rem 3.4rem;
+  min-height: 4.8rem;
+  border-radius: 2px;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.button:not([disabled]):hover {
+  background-color: var(--alegria-charcoal);
+  border-color: var(--alegria-charcoal);
+  color: var(--alegria-ivory);
+}
+
+.button--secondary:not([disabled]):hover {
+  background-color: var(--alegria-crimson);
+  border-color: var(--alegria-crimson);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
+
+.header-wrapper {
+  border-bottom: 1px solid var(--alegria-line);
+  background-color: var(--alegria-ivory);
+}
+
+.header {
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+}
+
+.header__menu-item {
+  font-size: 1.3rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.header__menu-item:hover span {
+  text-decoration-color: var(--alegria-crimson);
+}
+
+.announcement-bar__message {
+  font-size: 1.2rem;
+  letter-spacing: var(--alegria-tracking-wide);
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Product cards — restrained, editorial
+   -------------------------------------------------------------------------- */
+
+.card__heading {
+  font-family: var(--font-heading-family);
+  font-size: 1.7rem;
+  line-height: 1.25;
+}
+
+.card__heading a:hover {
+  color: var(--alegria-crimson);
+}
+
+.card__information {
+  padding: 1.6rem 0 0;
+}
+
+.card-information__text {
+  font-size: 1.3rem;
+}
+
+.card__media img,
+.media img {
+  transition: transform 0.6s ease;
+}
+
+@media (hover: hover) {
+  .card-wrapper:hover .card__media img {
+    transform: scale(1.03);
+  }
+}
+
+.price {
+  letter-spacing: 0.02em;
+}
+
+/* Variant pills — keep unselected labels at an accessible contrast */
+.product-form__input.product-form__input--pill input[type='radio'] + label {
+  color: rgba(var(--color-foreground), 0.92);
+}
+
+/* --------------------------------------------------------------------------
+   Editorial blocks
+   -------------------------------------------------------------------------- */
+
+.alegria-editorial {
+  display: grid;
+  gap: clamp(2.4rem, 6vw, 6rem);
+  align-items: center;
+}
+
+@media screen and (min-width: 900px) {
+  .alegria-editorial--split {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .alegria-editorial--reverse .alegria-editorial__media {
+    order: 2;
+  }
+}
+
+.alegria-editorial__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.alegria-editorial__body h2 {
+  font-size: clamp(2.8rem, 4vw, 4.4rem);
+  margin: 0 0 2rem;
+}
+
+.alegria-editorial__body p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: rgba(var(--color-foreground), 0.78);
+  max-width: 56ch;
+}
+
+.alegria-editorial__link {
+  display: inline-block;
+  margin-top: 2.4rem;
+  font-size: 1.3rem;
+  letter-spacing: var(--alegria-tracking-wide);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--alegria-charcoal);
+  padding-bottom: 0.4rem;
+}
+
+.alegria-editorial__link:hover {
+  color: var(--alegria-crimson);
+  border-color: var(--alegria-crimson);
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.footer {
+  border-top: 1px solid var(--alegria-line);
+}
+
+.footer-block__heading {
+  font-size: 1.3rem;
+  letter-spacing: var(--alegria-tracking-wide);
+  text-transform: uppercase;
+}
+
+.footer__copyright {
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  color: var(--alegria-stone);
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .card__media img,
+  .media img {
+    transition: none !important;
+  }
+}

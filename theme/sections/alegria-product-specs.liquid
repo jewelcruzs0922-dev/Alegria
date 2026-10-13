@@ -1,0 +1,123 @@
+{%- liquid
+  assign material = product.metafields.alegria.material.value
+  assign dimensions = product.metafields.alegria.dimensions.value
+  assign assembly = product.metafields.alegria.assembly.value
+  assign warranty = product.metafields.alegria.warranty.value
+-%}
+
+{%- if material or dimensions or assembly or warranty -%}
+  <style>
+    #shopify-section-{{ section.id }} .alegria-specs {
+      padding: 4rem 0 5rem;
+      border-top: 1px solid var(--alegria-line);
+    }
+    #shopify-section-{{ section.id }} .alegria-specs__head {
+      margin-bottom: 2.8rem;
+    }
+    #shopify-section-{{ section.id }} .alegria-specs__grid {
+      display: grid;
+      gap: 2.4rem 4rem;
+    }
+    @media screen and (min-width: 750px) {
+      #shopify-section-{{ section.id }} .alegria-specs__grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    #shopify-section-{{ section.id }} .alegria-specs__row dt {
+      font-size: 1.2rem;
+      letter-spacing: var(--alegria-tracking-wide);
+      text-transform: uppercase;
+      color: var(--alegria-crimson);
+      margin: 0 0 0.6rem;
+    }
+    #shopify-section-{{ section.id }} .alegria-specs__row dd {
+      margin: 0;
+      font-size: 1.6rem;
+      line-height: 1.6;
+      color: rgba(var(--color-foreground), 0.85);
+    }
+    #shopify-section-{{ section.id }} .alegria-specs__material-name {
+      font-family: var(--font-heading-family);
+      font-size: 2rem;
+      margin: 0 0 0.6rem;
+      color: rgb(var(--color-foreground));
+    }
+    #shopify-section-{{ section.id }} .alegria-specs__material p {
+      margin: 0 0 0.8rem;
+      font-size: 1.6rem;
+      line-height: 1.6;
+    }
+    #shopify-section-{{ section.id }} .alegria-specs__care {
+      font-size: 1.4rem;
+      color: var(--alegria-stone);
+    }
+  </style>
+
+  <div class="page-width">
+    <div class="alegria-specs">
+      <div class="alegria-specs__head">
+        <span class="alegria-eyebrow">Specifications</span>
+        <h2 class="h3">{{ section.settings.heading }}</h2>
+      </div>
+
+      <dl class="alegria-specs__grid">
+        {%- if material -%}
+          <div class="alegria-specs__row alegria-specs__material">
+            <dt>Material</dt>
+            <dd>
+              <p class="alegria-specs__material-name">{{ material.title }}</p>
+              {%- if material.description != blank -%}
+                <p>{{ material.description }}</p>
+              {%- endif -%}
+              {%- if material.care != blank -%}
+                <p class="alegria-specs__care">Care — {{ material.care }}</p>
+              {%- endif -%}
+            </dd>
+          </div>
+        {%- endif -%}
+
+        {%- if dimensions != blank -%}
+          <div class="alegria-specs__row">
+            <dt>Dimensions</dt>
+            <dd>{{ dimensions }}</dd>
+          </div>
+        {%- endif -%}
+
+        {%- if assembly != blank -%}
+          <div class="alegria-specs__row">
+            <dt>Assembly</dt>
+            <dd>{{ assembly }}</dd>
+          </div>
+        {%- endif -%}
+
+        {%- if warranty != blank -%}
+          <div class="alegria-specs__row">
+            <dt>Warranty</dt>
+            <dd>{{ warranty }}</dd>
+          </div>
+        {%- endif -%}
+      </dl>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Alegria specifications",
+  "tag": "section",
+  "class": "section-alegria-specs",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Made to be understood"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Alegria specifications"
+    }
+  ]
+}
+{% endschema %}
