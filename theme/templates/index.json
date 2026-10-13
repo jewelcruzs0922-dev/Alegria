@@ -3,7 +3,7 @@
     "alegria_hero": {
       "type": "alegria-hero",
       "settings": {
-        "image": "shopify://shop_images/64e53bcfec09364e73e68f5c286a3310.jpg",
+        "image": "shopify://shop_images/1a7e7b3a411ea5ded6c2a3982b32b282.jpg",
         "overlay_opacity": 55,
         "height": "large",
         "content_position": "left",
@@ -55,17 +55,49 @@
         "padding_bottom": 24
       }
     },
-    "alegria_room": {
-      "type": "alegria-editorial",
+    "alegria_rooms": {
+      "type": "alegria-room-inspiration",
+      "blocks": {
+        "room_reading": {
+          "type": "room",
+          "settings": {
+            "image": "shopify://shop_images/b72481855ec0a776e2905e0c6474c939.jpg",
+            "eyebrow": "Room 01",
+            "title": "The reading corner",
+            "text": "A generous chair, a low table for a lamp and a book, and warm, low light.",
+            "link": "shopify://pages/rooms",
+            "link_label": "Explore"
+          }
+        },
+        "room_dining": {
+          "type": "room",
+          "settings": {
+            "image": "shopify://shop_images/2c4c1218fc9f8a97d64b642db77723bd.jpg",
+            "eyebrow": "Room 02",
+            "title": "The dining room",
+            "text": "A solid table as the anchor, a pendant hung low, and seating built for long dinners.",
+            "link": "shopify://pages/rooms",
+            "link_label": "Explore"
+          }
+        },
+        "room_living": {
+          "type": "room",
+          "settings": {
+            "image": "shopify://shop_images/1d1ccd923692a3e4100218bc3ffba0a9.jpg",
+            "eyebrow": "Room 03",
+            "title": "The small living room",
+            "text": "Fewer, better pieces — furniture on legs, shelving that climbs the wall.",
+            "link": "shopify://pages/rooms",
+            "link_label": "Explore"
+          }
+        }
+      },
+      "block_order": ["room_reading", "room_dining", "room_living"],
       "settings": {
-        "image": "shopify://shop_images/c1351a28925ac0ded630f1da005993df.jpg",
-        "image_position": "right",
         "eyebrow": "Room inspiration",
-        "heading": "A quiet corner, well made",
-        "text": "<p>Layer a sculptural lounge chair, a low side table and warm lamplight to create a reading corner that invites you to slow down. Our pieces are designed to sit together as easily as they stand alone.</p>",
-        "link_label": "Explore rooms",
-        "link": "shopify://pages/rooms",
-        "color_scheme": "scheme-2"
+        "heading": "Rooms to live in",
+        "intro": "Our pieces are designed to sit together as easily as they stand alone. Explore three ways to bring Alegria into a room — a reading corner, a dining room and a small living space.",
+        "color_scheme": "scheme-1"
       }
     },
     "alegria_story": {
@@ -97,7 +129,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-2",
         "full_width": true,
         "padding_top": 72,
         "padding_bottom": 72
@@ -108,7 +140,7 @@
     "alegria_hero",
     "alegria_craft",
     "alegria_new",
-    "alegria_room",
+    "alegria_rooms",
     "alegria_story"
   ]
 }

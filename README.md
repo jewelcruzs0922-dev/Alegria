@@ -16,7 +16,9 @@ This is a fictional brand — there are **no real products, customers or payment
 - **Specifications section** (`sections/alegria-product-specs.liquid`) — renders product **metafields** and a linked **metaobject** (Material) on the product page, handling missing values gracefully.
 - **16 products across 5 collections** with real options/variants, variant-aware pricing and images.
 - **3-image product galleries** — a studio hero, a styled in-room lifestyle shot and a material detail shot per product.
-- **Our Story & Room Guides** pages that back the editorial content.
+- **Our Story & Room Guides** pages with dedicated section templates (hero, editorial, room cards).
+- **Room inspiration** section — three large room cards (reading corner, dining room, small living room).
+- **Collection banners** — an editorial banner image on every collection page.
 - **Native collection filtering & sorting** (Shopify Search & Discovery) with a mobile filter drawer.
 - **Ajax cart drawer** (Dawn) — add, update, remove, live count and subtotal.
 - **Journal** blog with three editorial articles.
@@ -91,6 +93,8 @@ shopify theme push --theme "Alegria" --store alegria-desoau8q.myshopify.com
 
 - Development store — storefront is **password-protected**; checkout uses Shopify's **test gateway** (no real payments).
 - Performance is bounded by Shopify's platform JavaScript.
+- **Variant-specific images** are supported by the theme but not set (this Admin API version does not expose a variant `imageId`/`mediaId` field; assign them in the Shopify admin UI).
+- The header uses a **text wordmark** (the shop name in Playfair Display) rather than an image logo, to keep the typeface consistent with the brand.
 - The storefront has no customer accounts content beyond Dawn defaults.
 
 ## Notes & disclaimers

@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "about_hero": {
+      "type": "alegria-hero",
+      "settings": {
+        "image": "shopify://shop_images/98b43d5f597095037470c4431d4b1408.jpg",
+        "overlay_opacity": 60,
+        "height": "medium",
+        "content_position": "left",
+        "eyebrow": "Our Story",
+        "heading": "Furniture made to be kept",
+        "text": "Alegria is a small, considered furniture studio working in oak, walnut, stone, wool and brass.",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "about_story": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Made slowly, honestly, to last",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Alegria was founded on a simple belief: that the objects we live with should be made slowly, honestly and to last.</p><p>We work with a small circle of makers — joiners, upholsterers, ceramicists and weavers — who share our patience for natural materials and quiet detail. Our ranges stay deliberately small, so that every piece can be considered, repaired and handed down.</p><p>From a solid oak dining table to a hand-loomed wool throw, each Alegria piece is designed to settle into a home and improve with time. We believe good furniture is not consumed. It is kept.</p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "padding_top": 72,
+        "padding_bottom": 24
+      }
+    },
+    "about_materials": {
+      "type": "alegria-editorial",
+      "settings": {
+        "image": "shopify://shop_images/c1351a28925ac0ded630f1da005993df.jpg",
+        "image_position": "right",
+        "eyebrow": "Our materials",
+        "heading": "Honest materials, natural finishes",
+        "text": "<p>European white oak and American walnut, honed travertine, natural wool and linen, and solid brushed brass. We finish with hard-wax oils and matte lacquers that protect the timber while letting its character show.</p><p>Our furniture is built with traditional joints and replaceable components, so that a well-loved piece can be refreshed rather than replaced.</p>",
+        "link_label": "Shop the collection",
+        "link": "shopify://collections/all",
+        "color_scheme": "scheme-1"
+      }
+    }
+  },
+  "order": ["about_hero", "about_story", "about_materials"]
+}

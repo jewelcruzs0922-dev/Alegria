@@ -92,3 +92,15 @@ Crimson `#CE2029`, Charcoal `#232323`, Metallic Gold `#D4AF37` on an ivory base 
 - **Product galleries:** generated **32 additional AI images** (a styled in-room lifestyle shot + a material detail shot per product) → every product now has a **3-image gallery**.
 - **Accessibility:** fixed contrast on the crimson band (white text), product-spec labels (gold) and care text; the homepage, collection and product pages are **axe-clean** (only the admin preview-bar iframe is flagged).
 - **Lighthouse (mobile, live):** Accessibility **100** · SEO **92** · Best Practices **73** · Performance **63**.
+
+## Content & layout pass (round 2)
+
+- **New hero image** and a **redesigned Room inspiration section** — the sparse two-column editorial was replaced with a new `alegria-room-inspiration` section: a heading + intro row above a 3-up grid of large room cards (reading corner / dining room / small living room), each with an image, caption and "Explore" link.
+- **Real page templates:** created `templates/page.about.json` and `templates/page.rooms.json` (hero + editorial + rich-text / room cards) and assigned them to the pages via `templateSuffix`, replacing the bare Dawn text page.
+- **Collection banners:** set an AI banner image on each of the 5 collections and enabled `show_collection_image`.
+- **Colour balance:** the brand-story band is now a full crimson band; charcoal remains dominant.
+- **Theme Check:** fixed the one warning in our code (unused assign); the remaining 9 are Dawn-base warnings.
+
+### API-version limitations found
+- **Variant-specific images** cannot be set programmatically: `ProductVariantsBulkInput`, `ProductVariantSetInput` and `ProductVariantInput` all reject an `imageId`/`mediaId` field in this Admin API version. The theme (Dawn) supports variant images natively — they must be assigned in the Shopify admin UI.
+- A **logo image** was prototyped (AI wordmark) but not applied: the generated typeface did not match the theme's Playfair Display and the asset had heavy margins, so the branded **text wordmark** (shop name rendered in Playfair) was kept.

@@ -1,0 +1,99 @@
+{
+  "sections": {
+    "rooms_hero": {
+      "type": "alegria-hero",
+      "settings": {
+        "image": "shopify://shop_images/e332fbc031707c9dc7c3cbfa3ef46076.jpg",
+        "overlay_opacity": 60,
+        "height": "medium",
+        "content_position": "left",
+        "eyebrow": "Room Guides",
+        "heading": "Rooms to live in",
+        "text": "Furniture only comes alive in a room. These guides show how Alegria pieces sit together.",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "rooms_cards": {
+      "type": "alegria-room-inspiration",
+      "blocks": {
+        "room_reading": {
+          "type": "room",
+          "settings": {
+            "image": "shopify://shop_images/b72481855ec0a776e2905e0c6474c939.jpg",
+            "eyebrow": "Room 01",
+            "title": "The reading corner",
+            "text": "Start with one generous chair, add a low side table for a lamp and a book, and let a floor lamp cast a warm pool of light. Keep everything else quiet.",
+            "link": "shopify://collections/seating",
+            "link_label": "Shop seating"
+          }
+        },
+        "room_dining": {
+          "type": "room",
+          "settings": {
+            "image": "shopify://shop_images/2c4c1218fc9f8a97d64b642db77723bd.jpg",
+            "eyebrow": "Room 02",
+            "title": "The dining room",
+            "text": "A solid table is the anchor. Choose a pendant hung low over the surface, upholstered seating for comfort, and a sideboard to hold the things you'd rather not see.",
+            "link": "shopify://collections/tables-desks",
+            "link_label": "Shop tables"
+          }
+        },
+        "room_living": {
+          "type": "room",
+          "settings": {
+            "image": "shopify://shop_images/1d1ccd923692a3e4100218bc3ffba0a9.jpg",
+            "eyebrow": "Room 03",
+            "title": "The small living room",
+            "text": "Fewer, better pieces — furniture on legs to let light travel, shelving that climbs the wall, and a restrained palette of charcoal, ivory and a single warm accent.",
+            "link": "shopify://collections/home-accessories",
+            "link_label": "Shop accessories"
+          }
+        }
+      },
+      "block_order": ["room_reading", "room_dining", "room_living"],
+      "settings": {
+        "eyebrow": "Three ways to live",
+        "heading": "Guides by room",
+        "intro": "Every room asks for something different. Browse three room guides and shop the pieces that make them work.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "rooms_cta": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Not sure where to start?",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Browse the full collection, or read our story to learn how each piece is made.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop all furniture",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": ["rooms_hero", "rooms_cards", "rooms_cta"]
+}
