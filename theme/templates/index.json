@@ -64,7 +64,7 @@
         "heading": "A quiet corner, well made",
         "text": "<p>Layer a sculptural lounge chair, a low side table and warm lamplight to create a reading corner that invites you to slow down. Our pieces are designed to sit together as easily as they stand alone.</p>",
         "link_label": "Explore rooms",
-        "link": "shopify://pages/about",
+        "link": "shopify://pages/rooms",
         "color_scheme": "scheme-2"
       }
     },
@@ -97,7 +97,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-4",
         "full_width": true,
         "padding_top": 72,
         "padding_bottom": 72

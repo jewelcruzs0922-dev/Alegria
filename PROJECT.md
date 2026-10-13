@@ -83,3 +83,12 @@ Crimson `#CE2029`, Charcoal `#232323`, Metallic Gold `#D4AF37` on an ivory base 
 - **Theme published** as the live theme (approved); original Horizon kept as an unpublished backup.
 - Live URL: https://alegria-desoau8q.myshopify.com/ (password-protected).
 - Store settings otherwise unchanged; no credentials committed.
+
+## Post-review refinements
+
+- **Palette rebalanced** to charcoal ≈60% / crimson ≈30% / gold ≈10% — a dark, bold direction. Five colour schemes updated; announcement bar rebranded (crimson).
+- **Broken links fixed:** created **Our Story** (`/pages/about`) and **Room Guides** (`/pages/rooms`) pages and repointed the editorial CTAs.
+- **SEO:** set the shop homepage title/description (`global.title_tag`/`description_tag` shop metafields) and unique meta descriptions for all 16 products, 6 collections and both pages.
+- **Product galleries:** generated **32 additional AI images** (a styled in-room lifestyle shot + a material detail shot per product) → every product now has a **3-image gallery**.
+- **Accessibility:** fixed contrast on the crimson band (white text), product-spec labels (gold) and care text; the homepage, collection and product pages are **axe-clean** (only the admin preview-bar iframe is flagged).
+- **Lighthouse (mobile, live):** Accessibility **100** · SEO **92** · Best Practices **73** · Performance **63**.

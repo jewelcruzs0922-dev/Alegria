@@ -1,16 +1,17 @@
 /* ==========================================================================
    Alegria — brand design system
-   Crimson · Charcoal · Metallic Gold, layered over the Dawn base theme.
+   Charcoal base (~60%) · Crimson (~30%) · Metallic Gold accents (~10%).
    ========================================================================== */
 
 :root {
-  --alegria-ivory: #faf7f2;
-  --alegria-sand: #f0ebe3;
-  --alegria-line: #e6e0d6;
-  --alegria-stone: #6b6660;
   --alegria-charcoal: #232323;
+  --alegria-charcoal-deep: #161616;
+  --alegria-ivory: #f5f1ea;
   --alegria-crimson: #ce2029;
+  --alegria-crimson-deep: #a8161e;
   --alegria-gold: #d4af37;
+  --alegria-muted: #a9a39a;
+  --alegria-line: rgba(245, 241, 234, 0.16);
 
   --alegria-space-section: clamp(4rem, 8vw, 9rem);
   --alegria-tracking-wide: 0.18em;
@@ -21,8 +22,8 @@
    -------------------------------------------------------------------------- */
 
 body {
-  background-color: var(--alegria-ivory);
-  color: var(--alegria-charcoal);
+  background-color: var(--alegria-charcoal);
+  color: var(--alegria-ivory);
   letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -50,7 +51,7 @@ h5,
   font-weight: 500;
   letter-spacing: var(--alegria-tracking-wide);
   text-transform: uppercase;
-  color: var(--alegria-crimson);
+  color: var(--alegria-gold);
   margin-bottom: 1.6rem;
 }
 
@@ -73,7 +74,7 @@ h5,
 }
 
 /* --------------------------------------------------------------------------
-   Buttons — squared, crimson, generous tracking
+   Buttons — squared; crimson primary, gold secondary accents
    -------------------------------------------------------------------------- */
 
 .button,
@@ -89,15 +90,15 @@ h5,
 }
 
 .button:not([disabled]):hover {
-  background-color: var(--alegria-charcoal);
-  border-color: var(--alegria-charcoal);
-  color: var(--alegria-ivory);
+  background-color: var(--alegria-crimson-deep);
+  border-color: var(--alegria-crimson-deep);
+  color: #ffffff;
 }
 
 .button--secondary:not([disabled]):hover {
-  background-color: var(--alegria-crimson);
-  border-color: var(--alegria-crimson);
-  color: #ffffff;
+  background-color: var(--alegria-gold);
+  border-color: var(--alegria-gold);
+  color: var(--alegria-charcoal);
 }
 
 /* --------------------------------------------------------------------------
@@ -106,7 +107,7 @@ h5,
 
 .header-wrapper {
   border-bottom: 1px solid var(--alegria-line);
-  background-color: var(--alegria-ivory);
+  background-color: var(--alegria-charcoal);
 }
 
 .header {
@@ -121,7 +122,7 @@ h5,
 }
 
 .header__menu-item:hover span {
-  text-decoration-color: var(--alegria-crimson);
+  text-decoration-color: var(--alegria-gold);
 }
 
 .announcement-bar__message {
@@ -131,7 +132,7 @@ h5,
 }
 
 /* --------------------------------------------------------------------------
-   Product cards — restrained, editorial
+   Product cards
    -------------------------------------------------------------------------- */
 
 .card__heading {
@@ -141,7 +142,7 @@ h5,
 }
 
 .card__heading a:hover {
-  color: var(--alegria-crimson);
+  color: var(--alegria-gold);
 }
 
 .card__information {
@@ -150,6 +151,7 @@ h5,
 
 .card-information__text {
   font-size: 1.3rem;
+  color: var(--alegria-muted);
 }
 
 .card__media img,
@@ -206,7 +208,7 @@ h5,
 .alegria-editorial__body p {
   font-size: 1.6rem;
   line-height: 1.7;
-  color: rgba(var(--color-foreground), 0.78);
+  color: rgba(var(--color-foreground), 0.82);
   max-width: 56ch;
 }
 
@@ -216,13 +218,34 @@ h5,
   font-size: 1.3rem;
   letter-spacing: var(--alegria-tracking-wide);
   text-transform: uppercase;
-  border-bottom: 1px solid var(--alegria-charcoal);
+  border-bottom: 1px solid var(--alegria-gold);
   padding-bottom: 0.4rem;
+  color: var(--alegria-gold);
 }
 
 .alegria-editorial__link:hover {
-  color: var(--alegria-crimson);
-  border-color: var(--alegria-crimson);
+  color: var(--alegria-ivory);
+  border-color: var(--alegria-ivory);
+}
+
+/* On crimson/dark bands, keep editorial text at full-strength foreground */
+.color-scheme-2 .alegria-editorial__eyebrow,
+.color-scheme-2 .alegria-editorial__link,
+.color-scheme-3 .alegria-editorial__eyebrow,
+.color-scheme-3 .alegria-editorial__link {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.color-scheme-2 .alegria-editorial__link:hover,
+.color-scheme-3 .alegria-editorial__link:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.color-scheme-2 .alegria-editorial__body p,
+.color-scheme-3 .alegria-editorial__body p {
+  color: rgba(255, 255, 255, 0.95);
 }
 
 /* --------------------------------------------------------------------------
@@ -242,7 +265,7 @@ h5,
 .footer__copyright {
   font-size: 1.2rem;
   letter-spacing: 0.04em;
-  color: var(--alegria-stone);
+  color: var(--alegria-muted);
 }
 
 /* --------------------------------------------------------------------------

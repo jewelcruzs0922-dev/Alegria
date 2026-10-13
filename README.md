@@ -15,10 +15,12 @@ This is a fictional brand — there are **no real products, customers or payment
 - **Reusable editorial section** (`sections/alegria-editorial.liquid`) — split image/text, image side configurable.
 - **Specifications section** (`sections/alegria-product-specs.liquid`) — renders product **metafields** and a linked **metaobject** (Material) on the product page, handling missing values gracefully.
 - **16 products across 5 collections** with real options/variants, variant-aware pricing and images.
+- **3-image product galleries** — a studio hero, a styled in-room lifestyle shot and a material detail shot per product.
+- **Our Story & Room Guides** pages that back the editorial content.
 - **Native collection filtering & sorting** (Shopify Search & Discovery) with a mobile filter drawer.
 - **Ajax cart drawer** (Dawn) — add, update, remove, live count and subtotal.
 - **Journal** blog with three editorial articles.
-- **Brand design system** — Crimson `#CE2029`, Charcoal `#232323`, Metallic Gold `#D4AF37` on an ivory base; Playfair Display headings + Jost body.
+- **Brand design system** — a charcoal-led palette (charcoal ≈60% / crimson ≈30% / gold ≈10%): Charcoal `#232323`, Crimson `#CE2029`, Metallic Gold `#D4AF37`; Playfair Display headings + Jost body.
 - **AI-generated imagery** (Gemini) uploaded to Shopify Files.
 
 | Product page | Mobile |
@@ -81,9 +83,9 @@ shopify theme push --theme "Alegria" --store alegria-desoau8q.myshopify.com
 
 - **Theme Check:** 0 errors (Dawn base warnings only).
 - **axe-core:** homepage, collection and product pages **clean** (only the admin preview-bar iframe is flagged, which does not exist on the live store).
-- **Lighthouse (mobile, live theme):** Accessibility **97** · SEO **92** · Best Practices **73** · Performance **54** (FCP 4.8s, LCP 8.2s, CLS 0).
+- **Lighthouse (mobile, live theme):** Accessibility **100** · SEO **92** · Best Practices **73** · Performance **63**.
   - Performance / Best Practices are dominated by **Shopify platform scripts** (Web Pixels, analytics, account) rather than the theme; the hero image is prioritised and below-the-fold images lazy-loaded.
-- Verified: variant selection (price + availability), add-to-cart, collection filtering/sorting, navigation, journal, responsive layout (no horizontal overflow at 390px).
+- Verified: variant selection (price + availability), add-to-cart, collection filtering/sorting, navigation, journal, pages, 3-image galleries, responsive layout (no horizontal overflow at 390px).
 
 ## Known limitations
 
