@@ -27,6 +27,7 @@ This is a fictional brand — there are **no real products, customers or payment
 - **Values section** (`sections/alegria-values.liquid`) — brand promises with line icons.
 - **Testimonials section** (`sections/alegria-testimonials.liquid`) — starred customer quotes.
 - **Journal section** (`sections/alegria-journal.liquid`) — the latest posts pulled from the Journal blog.
+- **Article pages** — on-brand typography plus a **"More from the Journal"** related-articles section.
 - **Polished details:** a branded footer (Explore menu + brand statement), an on-brand 404 page, and a smooth card cross-fade on hover (lifestyle image, 1s).
 - **Brand design system** — a charcoal-led palette (charcoal ≈60% / crimson ≈30% / gold ≈10%): Charcoal `#232323`, Crimson `#CE2029`, Metallic Gold `#D4AF37`; Playfair Display headings + Jost body.
 - **AI-generated imagery** (Gemini) uploaded to Shopify Files.

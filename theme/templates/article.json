@@ -32,9 +32,19 @@
         "share",
         "content"
       ]
+    },
+    "more": {
+      "type": "alegria-article-more",
+      "settings": {
+        "eyebrow": "Keep reading",
+        "heading": "More from the Journal",
+        "posts_to_show": 3,
+        "color_scheme": "scheme-1"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "more"
   ]
 }

@@ -280,12 +280,115 @@ h5,
   font-size: 1.3rem;
   letter-spacing: var(--alegria-tracking-wide);
   text-transform: uppercase;
+  color: rgba(245, 241, 234, 0.6);
+}
+
+/* Brand column — show the wordmark, not just a lone social icon */
+.footer-block__brand-info .footer-block__heading {
+  font-family: var(--font-heading-family);
+  font-size: 2.6rem;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: var(--alegria-ivory);
+  margin-bottom: 1.2rem;
+}
+
+.footer-block__brand-info .rte:not(.footer-block__heading) {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: rgba(245, 241, 234, 0.7);
+  max-width: 32ch;
+}
+
+/* Footer links — no underline; gold on hover */
+.footer-block__details-content a,
+.footer .list-menu__item--link {
+  text-decoration: none;
+  color: rgba(245, 241, 234, 0.82);
+  transition: color 0.2s ease;
+}
+
+.footer-block__details-content a:hover,
+.footer .list-menu__item--link:hover {
+  color: var(--alegria-gold);
+  text-decoration: none;
+}
+
+.footer-block__details-content .list-unstyled {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.footer-block__details-content.rte p {
+  margin: 0 0 0.9rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.footer-block__details-content.rte p:last-child {
+  margin-bottom: 0;
+}
+
+.footer__list-social .list-social__link {
+  color: rgba(245, 241, 234, 0.82);
+}
+
+.footer__list-social .list-social__link:hover {
+  color: var(--alegria-gold);
 }
 
 .footer__copyright {
   font-size: 1.2rem;
   letter-spacing: 0.04em;
   color: var(--alegria-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Journal / article pages
+   -------------------------------------------------------------------------- */
+
+.article-template__title {
+  font-size: clamp(3rem, 4.6vw, 5rem);
+  line-height: 1.08;
+  margin-bottom: 1.4rem;
+}
+
+.article-template__hero-container {
+  margin-bottom: clamp(3rem, 5vw, 5rem);
+}
+
+.article-template__content {
+  font-size: 1.7rem;
+  line-height: 1.8;
+  color: rgba(245, 241, 234, 0.86);
+}
+
+.article-template__content h2 {
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  margin-top: 3.6rem;
+}
+
+.article-template__content h3 {
+  font-size: clamp(1.9rem, 2.4vw, 2.4rem);
+  margin-top: 3rem;
+}
+
+.article-template__content a {
+  color: var(--alegria-gold);
+}
+
+.article-template__content blockquote {
+  border-left: 2px solid var(--alegria-gold);
+  padding-left: 2rem;
+  margin: 2.4rem 0;
+  font-family: var(--font-heading-family);
+  font-size: 2rem;
+  color: var(--alegria-ivory);
+}
+
+.article-template__link {
+  color: var(--alegria-gold);
+  text-decoration: none;
 }
 
 /* --------------------------------------------------------------------------

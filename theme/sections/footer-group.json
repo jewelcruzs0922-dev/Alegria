@@ -11,34 +11,41 @@
             "show_social": true
           }
         },
-        "menu": {
+        "shop": {
+          "type": "text",
+          "settings": {
+            "heading": "Shop",
+            "subtext": "<p><a href=\"/collections/seating\">Seating</a></p><p><a href=\"/collections/tables-desks\">Tables &amp; Desks</a></p><p><a href=\"/collections/lighting\">Lighting</a></p><p><a href=\"/collections/storage\">Storage</a></p><p><a href=\"/collections/home-accessories\">Home Accessories</a></p><p><a href=\"/collections/all\">All furniture</a></p>"
+          }
+        },
+        "explore": {
           "type": "link_list",
           "settings": {
             "heading": "Explore",
             "menu": "footer"
           }
         },
-        "about": {
+        "visit": {
           "type": "text",
           "settings": {
-            "heading": "Alegria",
-            "subtext": "<p>Considered furniture in natural materials — made slowly, to be lived with for years.</p>"
+            "heading": "Visit",
+            "subtext": "<p>Our studio &amp; showroom<br>12 Maker's Yard, London E2</p><p><a href=\"mailto:hello@alegria.example\">hello@alegria.example</a><br>Mon–Fri, 9am–5pm</p>"
           }
         }
       },
-      "block_order": ["brand", "menu", "about"],
+      "block_order": ["brand", "shop", "explore", "visit"],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
+        "newsletter_heading": "Join the list",
         "enable_follow_on_shop": true,
-        "show_social": true,
+        "show_social": false,
         "enable_country_selector": true,
         "enable_language_selector": true,
         "payment_enable": true,
         "show_policy": true,
         "margin_top": 0,
-        "padding_top": 36,
+        "padding_top": 52,
         "padding_bottom": 36
       }
     }

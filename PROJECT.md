@@ -139,3 +139,11 @@ Crimson `#CE2029`, Charcoal `#232323`, Metallic Gold `#D4AF37` on an ivory base 
   - **Platform caveat:** on **development stores Shopify always serves its own default password page** to visitors; the themed page is only shown on a paid plan (or in the theme editor). Kept as correct, portfolio-worthy theme code and documented.
 - **Mobile verified:** homepage and product page checked at **390px** — `scrollWidth == clientWidth` (no horizontal overflow); hero, grids and stacked sections all render cleanly.
 - **Search & collection filtering** confirmed present (Availability + Price facets + sort). Adding metafield / Product-type / Vendor filters requires the **Search & Discovery** app (manual step in the admin).
+
+## Polish pass (round 7)
+
+- **Homepage journal:** removed the "Read the journal" link so the section ends cleanly on the three cards.
+- **Footer rebuilt:** added a proper brand wordmark (Playfair), a **Shop** column (the five collections), an **Explore** column (footer menu) and a **Visit** column (studio address, email, opening hours). Removed the stray link underlines and the duplicated social icons; headings/links are now on-brand.
+  - Fixed a CSS bug: the brand-description rule (`.footer-block__brand-info .rte`) also matched the wordmark (which carries `rte` **and** `footer-block__heading`), overriding its size and colour. Scoped it with `:not(.footer-block__heading)`.
+- **Article pages:** added a **"More from the Journal"** section (`sections/alegria-article-more.liquid`) showing related articles, plus on-brand article typography (headings, links, blockquotes, hero spacing).
+  - The article **body copy** is still short (a few lines each); expanding it is a content task that needs admin access.

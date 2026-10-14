@@ -214,7 +214,7 @@
         "intro": "Stories on materials, craft and the slow business of making rooms worth staying in.",
         "blog": "journal",
         "posts_to_show": 3,
-        "show_view_all": true,
+        "show_view_all": false,
         "color_scheme": "scheme-1"
       }
     },
