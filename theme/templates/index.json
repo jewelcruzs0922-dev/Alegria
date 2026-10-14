@@ -55,6 +55,29 @@
         "padding_bottom": 24
       }
     },
+    "alegria_collections": {
+      "type": "collection-list",
+      "blocks": {
+        "c_seating": { "type": "featured_collection", "settings": { "collection": "seating" } },
+        "c_tables": { "type": "featured_collection", "settings": { "collection": "tables-desks" } },
+        "c_lighting": { "type": "featured_collection", "settings": { "collection": "lighting" } },
+        "c_storage": { "type": "featured_collection", "settings": { "collection": "storage" } },
+        "c_accessories": { "type": "featured_collection", "settings": { "collection": "home-accessories" } }
+      },
+      "block_order": ["c_seating", "c_tables", "c_lighting", "c_storage", "c_accessories"],
+      "settings": {
+        "title": "Shop by collection",
+        "heading_size": "h2",
+        "image_ratio": "portrait",
+        "columns_desktop": 5,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 40
+      }
+    },
     "alegria_rooms": {
       "type": "alegria-room-inspiration",
       "blocks": {
@@ -140,6 +163,7 @@
     "alegria_hero",
     "alegria_craft",
     "alegria_new",
+    "alegria_collections",
     "alegria_rooms",
     "alegria_story"
   ]

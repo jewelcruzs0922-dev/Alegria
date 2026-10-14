@@ -104,3 +104,10 @@ Crimson `#CE2029`, Charcoal `#232323`, Metallic Gold `#D4AF37` on an ivory base 
 ### API-version limitations found
 - **Variant-specific images** cannot be set programmatically: `ProductVariantsBulkInput`, `ProductVariantSetInput` and `ProductVariantInput` all reject an `imageId`/`mediaId` field in this Admin API version. The theme (Dawn) supports variant images natively — they must be assigned in the Shopify admin UI.
 - A **logo image** was prototyped (AI wordmark) but not applied: the generated typeface did not match the theme's Playfair Display and the asset had heavy margins, so the branded **text wordmark** (shop name rendered in Playfair) was kept.
+
+## Improvements pass (round 3)
+
+- **Variant-specific images solved.** Discovered that `productVariantsBulkUpdate` accepts `mediaId` (the earlier failures were `imageId` on `ProductVariantInput`/`ProductVariantSetInput`, which this version rejects). Generated 10 colour/finish variant images and assigned each to its variant — the product gallery now switches image when a variant is selected (e.g. Larkin in Crimson Velvet / Ivory Bouclé / Charcoal Linen).
+- **"Shop by collection"** section added to the homepage (5 collections, portrait cards) for faster discovery.
+- **Product pages enriched:** added **Shipping & returns** and **Care & materials** accordion blocks alongside the metafield Specifications.
+- Screenshots refreshed (`product-desktop.png`).

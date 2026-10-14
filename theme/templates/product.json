@@ -36,6 +36,22 @@
         "description": {
           "type": "description"
         },
+        "shipping": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & returns",
+            "icon": "truck",
+            "content": "<p><strong>Delivery.</strong> Made-to-order pieces are delivered by our white-glove service within 2–4 weeks; in-stock accessories ship within 3–5 days.</p><p><strong>Returns.</strong> If a piece isn't right, return it within 30 days in its original condition for a full refund.</p>"
+          }
+        },
+        "care": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Care & materials",
+            "icon": "leaf",
+            "content": "<p>Timber is finished with hard-wax oil — dust regularly and re-oil once a year. Textiles should be vacuumed gently and professionally cleaned when needed. Full care notes ship with every piece.</p>"
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -51,6 +67,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
+        "shipping",
+        "care",
         "share"
       ],
       "settings": {
