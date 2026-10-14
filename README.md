@@ -23,12 +23,12 @@ This is a fictional brand — there are **no real products, customers or payment
 - **Collection banners** — an editorial banner image on every collection page.
 - **Native collection filtering & sorting** (Shopify Search & Discovery) — **Availability, Price, Product type** and a **Material** metafield filter — with a mobile filter drawer.
 - **Ajax cart drawer** (Dawn) — add, update, remove, live count and subtotal.
-- **Journal** blog with three editorial articles.
+- **Journal** blog with three full editorial articles (structured with headings and lists).
 - **Values section** (`sections/alegria-values.liquid`) — brand promises with line icons.
 - **Testimonials section** (`sections/alegria-testimonials.liquid`) — starred customer quotes.
 - **Journal section** (`sections/alegria-journal.liquid`) — the latest posts pulled from the Journal blog.
-- **Article pages** — on-brand typography plus a **"More from the Journal"** related-articles section.
-- **Polished details:** a branded footer (Explore menu + brand statement), an on-brand 404 page, and a smooth card cross-fade on hover (lifestyle image, 1s).
+- **Article pages** — on-brand typography plus a **"More from the Journal"** related-articles section (`sections/alegria-article-more.liquid`).
+- **Polished details:** a branded footer (logo, **Shop / Explore / Visit** columns + newsletter), an on-brand 404 page, and a smooth card cross-fade on hover (lifestyle image, 1s).
 - **Brand design system** — a charcoal-led palette (charcoal ≈60% / crimson ≈30% / gold ≈10%): Charcoal `#232323`, Crimson `#CE2029`, Metallic Gold `#D4AF37`; Playfair Display headings + Jost body.
 - **AI-generated imagery** (Gemini) uploaded to Shopify Files.
 - **Brand favicon + social share image**, plus branded **Contact**, **Blog listing** and **Collections** pages (each with an editorial hero).
@@ -41,6 +41,10 @@ This is a fictional brand — there are **no real products, customers or payment
 | Our Story | Room Guides |
 | --- | --- |
 | ![About](docs/screenshots/about-desktop.png) | ![Rooms](docs/screenshots/rooms-desktop.png) |
+
+| Contact | Journal |
+| --- | --- |
+| ![Contact](docs/screenshots/contact-desktop.png) | ![Journal](docs/screenshots/blog-desktop.png) |
 
 ## Catalog
 
@@ -56,6 +60,24 @@ This is a fictional brand — there are **no real products, customers or payment
 
 Products use real Shopify variants (Upholstery / Size / Finish / Colour …) with variant-specific pricing.
 
+## Pages
+
+| Page | Template | Notes |
+| --- | --- | --- |
+| Home | `index.json` | Hero → craftsmanship → new arrivals → shop by collection → values → rooms → testimonials → journal → closing band |
+| Product | `product.json` | Gallery, variants, specifications (metafields + metaobject), shipping & care accordions |
+| Collection | `collection.json` | Editorial banner + native filtering & sorting |
+| Collections index | `list-collections.json` | Hero + collection grid |
+| Our Story | `page.about.json` | Hero, story, principles, materials & makers |
+| Room Guides | `page.rooms.json` | Hero, room cards, featured pieces |
+| Contact | `page.contact.json` | Hero, contact details, message form |
+| Journal | `blog.json` | Editorial hero + article grid |
+| Article | `article.json` | Full article + "More from the Journal" |
+| Cart | `cart.json` | Ajax cart drawer + cart page |
+| Search | `search.json` | Results, filters & sort |
+| 404 | `404.json` | On-brand not-found page |
+| Password | `password.json` | Branded password page (dev-store limited) |
+
 ## Structured content (metafields & metaobjects)
 
 - **Metaobject `alegria_material`** (Title, Description, Care) — 5 reusable entries (Solid Oak, Walnut, Travertine, Wool & Linen, Brushed Brass).
@@ -68,7 +90,7 @@ Products use real Shopify variants (Upholstery / Size / Finish / Colour …) wit
 theme/
   layout/        theme.liquid (brand CSS injected after base.css)
   templates/     index.json, product.json, collection.json, blog.json, article.json, …
-  sections/      alegria-hero, alegria-editorial, alegria-values, alegria-testimonials, alegria-journal, alegria-product-specs (+ Dawn sections)
+  sections/      alegria-hero, alegria-editorial, alegria-values, alegria-testimonials, alegria-journal, alegria-article-more, alegria-product-specs, alegria-password (+ Dawn sections)
   snippets/      Dawn snippets (+ quantity-input label fix)
   assets/        alegria.css (brand layer) + Dawn assets
   config/        settings_schema.json, settings_data.json (5 brand colour schemes)
@@ -100,14 +122,14 @@ shopify theme push --theme "Alegria" --store alegria-desoau8q.myshopify.com
 - **axe-core:** homepage, collection and product pages **clean** (only the admin preview-bar iframe is flagged, which does not exist on the live store).
 - **Lighthouse (mobile, live theme):** Accessibility **100** · SEO **92** · Best Practices **73** · Performance **63**.
   - Performance / Best Practices are dominated by **Shopify platform scripts** (Web Pixels, analytics, account) rather than the theme; the hero image is prioritised and below-the-fold images lazy-loaded.
-- Verified: variant selection (price + availability), add-to-cart, collection filtering/sorting, navigation, journal, pages, 3-image galleries, responsive layout (no horizontal overflow at 390px).
+- Verified: variant selection (price + availability), add-to-cart, collection **filtering** (Availability · Price · Product type · Material) and sorting, search, cart drawer, journal & article rendering, 3-image galleries, responsive layout (no horizontal overflow at 390px).
 
 ## Known limitations
 
 - Development store — storefront is **password-protected**; checkout uses Shopify's **test gateway** (no real payments).
   - On a **development store Shopify always serves its own default password page** to visitors; the theme's branded password page (`sections/alegria-password.liquid`) is only shown on a paid plan (or in the theme editor).
 - Performance is bounded by Shopify's platform JavaScript.
-- The header uses a **text wordmark** (the shop name in Playfair Display) rather than an image logo, to keep the typeface consistent with the brand.
+- The **logo** and favicon are shipped as **theme assets** (`assets/alegria-logo.png`, `assets/alegria-favicon.png`) and rendered directly rather than set through the theme's logo picker (Shopify Files), so the theme works without admin uploads.
 - The storefront has no customer accounts content beyond Dawn defaults.
 
 ## Notes & disclaimers
