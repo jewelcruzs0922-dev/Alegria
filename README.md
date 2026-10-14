@@ -21,7 +21,7 @@ This is a fictional brand — there are **no real products, customers or payment
 - **Our Story & Room Guides** pages with dedicated section templates (hero, editorial, room cards).
 - **Room inspiration** section — three large room cards (reading corner, dining room, small living room).
 - **Collection banners** — an editorial banner image on every collection page.
-- **Native collection filtering & sorting** (Shopify Search & Discovery) with a mobile filter drawer.
+- **Native collection filtering & sorting** (Shopify Search & Discovery) — **Availability, Price, Product type** and a **Material** metafield filter — with a mobile filter drawer.
 - **Ajax cart drawer** (Dawn) — add, update, remove, live count and subtotal.
 - **Journal** blog with three editorial articles.
 - **Values section** (`sections/alegria-values.liquid`) — brand promises with line icons.

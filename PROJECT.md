@@ -164,3 +164,11 @@ Crimson `#CE2029`, Charcoal `#232323`, Metallic Gold `#D4AF37` on an ivory base 
 
 - **Brand logo added:** the Alegria gold ribbon-monogram lockup was supplied as a transparent PNG and added as `assets/alegria-logo.png`, now used in the **header**, the **footer brand column** and the **password header** (rendered from theme assets, so no Shopify Files/admin needed).
 - Cropped the **monogram** (`assets/alegria-logo-mark.png`) and built a matching **favicon** from it (`assets/alegria-favicon.png` — the mark on charcoal), wired in `layout/theme.liquid`. Assets were downscaled to keep the theme light.
+
+## Content pass (round 10 — admin)
+
+- **Journal articles:** wrote full, structured bodies for all three (intro + H2 sections + lists) — from a few lines to ~350–400 words each, via `articleUpdate`.
+- **Store policies:** added **Shipping**, **Returns/Refund** and **Terms of Service** via `shopPolicyUpdate` (Privacy remains Shopify auto-managed).
+- **Product descriptions:** enriched all 16 products with an intro, feature bullets and a closing line via `productUpdate`.
+- **Search & Discovery:** installed the app and added **Product type** and **Material** filters alongside the default **Availability** and **Price** (verified on the storefront collection page).
+- **Social links:** added Facebook, Pinterest, TikTok and YouTube alongside Instagram (theme settings).
