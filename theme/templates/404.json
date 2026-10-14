@@ -1,10 +1,47 @@
 {
   "sections": {
-    "main": {
-      "type": "main-404"
+    "not_found_hero": {
+      "type": "alegria-hero",
+      "settings": {
+        "image": "shopify://shop_images/1d1ccd923692a3e4100218bc3ffba0a9.jpg",
+        "overlay_opacity": 65,
+        "height": "medium",
+        "content_position": "left",
+        "eyebrow": "Error 404",
+        "heading": "This page has wandered off",
+        "text": "The page you're looking for has moved or no longer exists — but there's plenty more to see.",
+        "button_label": "Back to the collection",
+        "button_link": "shopify://collections/all"
+      }
+    },
+    "not_found_recos": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Pieces you might like",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
     }
   },
-  "order": [
-    "main"
-  ]
+  "order": ["not_found_hero", "not_found_recos"]
 }

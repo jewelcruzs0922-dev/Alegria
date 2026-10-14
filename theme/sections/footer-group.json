@@ -4,8 +4,29 @@
   "sections": {
     "footer": {
       "type": "footer",
-      "blocks": {},
-      "block_order": [],
+      "blocks": {
+        "brand": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        },
+        "menu": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Explore",
+            "menu": "footer"
+          }
+        },
+        "about": {
+          "type": "text",
+          "settings": {
+            "heading": "Alegria",
+            "subtext": "<p>Considered furniture in natural materials — made slowly, to be lived with for years.</p>"
+          }
+        }
+      },
+      "block_order": ["brand", "menu", "about"],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,

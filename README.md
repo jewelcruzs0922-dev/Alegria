@@ -24,6 +24,7 @@ This is a fictional brand — there are **no real products, customers or payment
 - **Native collection filtering & sorting** (Shopify Search & Discovery) with a mobile filter drawer.
 - **Ajax cart drawer** (Dawn) — add, update, remove, live count and subtotal.
 - **Journal** blog with three editorial articles.
+- **Polished details:** a branded footer (Explore menu + brand statement), an on-brand 404 page, and a smooth card cross-fade on hover (lifestyle image, 1s).
 - **Brand design system** — a charcoal-led palette (charcoal ≈60% / crimson ≈30% / gold ≈10%): Charcoal `#232323`, Crimson `#CE2029`, Metallic Gold `#D4AF37`; Playfair Display headings + Jost body.
 - **AI-generated imagery** (Gemini) uploaded to Shopify Files.
 

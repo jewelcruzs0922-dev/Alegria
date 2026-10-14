@@ -111,3 +111,10 @@ Crimson `#CE2029`, Charcoal `#232323`, Metallic Gold `#D4AF37` on an ivory base 
 - **"Shop by collection"** section added to the homepage (5 collections, portrait cards) for faster discovery.
 - **Product pages enriched:** added **Shipping & returns** and **Care & materials** accordion blocks alongside the metafield Specifications.
 - Screenshots refreshed (`product-desktop.png`).
+
+## Polish pass (round 4)
+
+- **Slower card hover:** Dawn swaps the secondary (lifestyle) image with **no opacity transition**, so the cross-fade snapped. Overrode it to a smooth `opacity 1s / transform 1.3s` cross-fade + gentle zoom.
+- **Custom 404 page** (`templates/404.json`): on-brand hero ("This page has wandered off") + recommended products.
+- **Footer rebuilt:** added a brand block, an **Explore** menu (Journal, Our Story, Room Guides, Contact, Search) and a short brand statement.
+- **Structured data:** removed a duplicate `Organization` JSON-LD — Shopify already injects Organization + WebSite schema, so we rely on Shopify's.
