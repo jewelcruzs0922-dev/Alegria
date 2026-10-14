@@ -7,15 +7,21 @@
   #shopify-section-{{ section.id }} .alegria-hero {
     position: relative;
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     align-items: end;
     min-height: 62vh;
     overflow: hidden;
     color: #f5f1ea;
   }
-  #shopify-section-{{ section.id }} .alegria-hero--small { min-height: 46vh; }
-  #shopify-section-{{ section.id }} .alegria-hero--medium { min-height: 62vh; }
+  #shopify-section-{{ section.id }} .alegria-hero--small { min-height: 46vh; }  #shopify-section-{{ section.id }} .alegria-hero--medium { min-height: 62vh; }
   #shopify-section-{{ section.id }} .alegria-hero--large { min-height: 78vh; }
   #shopify-section-{{ section.id }} .alegria-hero--full { min-height: calc(100vh - 6rem); }
+
+  #shopify-section-{{ section.id }} .alegria-hero > .page-width {
+    width: 100%;
+    justify-self: stretch;
+    align-self: end;
+  }
 
   #shopify-section-{{ section.id }} .alegria-hero__media,
   #shopify-section-{{ section.id }} .alegria-hero__media img {
@@ -97,7 +103,16 @@
 
 <div class="alegria-hero {{ height_class }} {{ position_class }}">
   <div class="alegria-hero__media">
-    {%- if section.settings.image != blank -%}
+    {%- if section.settings.asset_image != blank -%}
+      <img
+        src="{{ section.settings.asset_image | asset_url }}"
+        alt="{{ section.settings.heading | escape }}"
+        loading="eager"
+        fetchpriority="high"
+        width="1600"
+        height="900"
+      >
+    {%- elsif section.settings.image != blank -%}
       {{
         section.settings.image
         | image_url: width: 3200
@@ -154,6 +169,12 @@
       "type": "image_picker",
       "id": "image",
       "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "asset_image",
+      "label": "Theme asset filename",
+      "info": "Optional. A file in assets/ (e.g. alegria-hero-blog.jpg). Overrides the image picker above."
     },
     {
       "type": "range",

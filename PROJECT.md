@@ -147,3 +147,15 @@ Crimson `#CE2029`, Charcoal `#232323`, Metallic Gold `#D4AF37` on an ivory base 
   - Fixed a CSS bug: the brand-description rule (`.footer-block__brand-info .rte`) also matched the wordmark (which carries `rte` **and** `footer-block__heading`), overriding its size and colour. Scoped it with `:not(.footer-block__heading)`.
 - **Article pages:** added a **"More from the Journal"** section (`sections/alegria-article-more.liquid`) showing related articles, plus on-brand article typography (headings, links, blockquotes, hero spacing).
   - The article **body copy** is still short (a few lines each); expanding it is a content task that needs admin access.
+
+## Polish pass (round 8)
+
+- **Favicon + social share image:** added a brand **favicon** (`assets/alegria-favicon.svg` — a gold "A" monogram) and a wide **social share image** (`assets/alegria-share.jpg`). Wired via `layout/theme.liquid` (favicon fallback) and `snippets/meta-tags.liquid` (og:image fallback when a page has no image). Theme assets are used because uploading to Shopify Files needs an admin session.
+- **Hero layout bug fixed:** the hero content was shrink-wrapping and centring inside the grid, so `content_position` (left/right) had no effect and the side scrim never landed behind the text. Forced `.alegria-hero > .page-width` to full width — content is now properly left/right aligned and the scrim reliably sits behind it on every hero.
+- **New dark hero imagery** for the Journal, Collections and Contact pages (generated and stored as **theme assets**, referenced through a new `asset_image` hero setting), so white headings read cleanly over the photography.
+- **Branded previously-plain pages:**
+  - **Contact** — hero + contact details + form.
+  - **Blog listing** — hero (and the duplicate default title hidden).
+  - **Collections index** — hero.
+  - **Cart** and **Search** were already on-brand (themed via `alegria.css`).
+- **Removed duplicate H1s** on the blog/collections pages where a hero provides the page title.

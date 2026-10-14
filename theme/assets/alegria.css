@@ -391,6 +391,12 @@ h5,
   text-decoration: none;
 }
 
+/* A branded hero provides the H1 on these pages, so hide the default title */
+.main-blog > .title--primary,
+.main-list-collections > .title--primary {
+  display: none;
+}
+
 /* --------------------------------------------------------------------------
    Accessibility
    -------------------------------------------------------------------------- */

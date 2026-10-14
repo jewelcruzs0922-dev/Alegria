@@ -1,9 +1,23 @@
 {
   "sections": {
+    "hero": {
+      "type": "alegria-hero",
+      "settings": {
+        "asset_image": "alegria-hero-collections.jpg",
+        "overlay_opacity": 45,
+        "height": "small",
+        "content_position": "left",
+        "eyebrow": "Browse",
+        "heading": "Collections",
+        "text": "Five families of considered furniture, designed to live together.",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
     "main": {
       "type": "main-list-collections",
       "settings": {
-        "title": "Collections",
+        "title": "",
         "sort": "alphabetical",
         "image_ratio": "square",
         "columns_desktop": 3,
@@ -11,7 +25,5 @@
       }
     }
   },
-  "order": [
-    "main"
-  ]
+  "order": ["hero", "main"]
 }
