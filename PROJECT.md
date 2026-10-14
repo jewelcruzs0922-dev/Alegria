@@ -118,3 +118,16 @@ Crimson `#CE2029`, Charcoal `#232323`, Metallic Gold `#D4AF37` on an ivory base 
 - **Custom 404 page** (`templates/404.json`): on-brand hero ("This page has wandered off") + recommended products.
 - **Footer rebuilt:** added a brand block, an **Explore** menu (Journal, Our Story, Room Guides, Contact, Search) and a short brand statement.
 - **Structured data:** removed a duplicate `Organization` JSON-LD — Shopify already injects Organization + WebSite schema, so we rely on Shopify's.
+
+## Polish pass (round 5)
+
+- **Hero rebuilt:** removed the eyebrow tagline and the sub-heading paragraph so the hero is a single, confident headline plus call to action. Replaced the background with a **darker, moodier interior** so the white headline reads clearly (the previous image was a bright white wall).
+- **Position-aware hero scrim:** the hero overlay now darkens the side the text sits on (left/right) as well as the base, so headlines stay legible over bright imagery. Raised the overlay on the bright-image heroes (About, Rooms).
+- **New custom sections:**
+  - `alegria-values` — brand promises with inline line icons (natural materials, made by hand, delivery, guarantee).
+  - `alegria-testimonials` — starred customer quotes in bordered cards.
+  - `alegria-journal` — the latest posts pulled from the Journal blog, with date, title, excerpt and a "read the story" link.
+- **Homepage re-paced:** hero → craftsmanship → new arrivals → shop by collection → **values** → rooms → **testimonials** → **journal** → closing crimson band.
+- **About expanded:** added a "four principles" row and an **"Our makers"** editorial (new workshop image) plus a closing call to action.
+- **Rooms expanded:** added a "Pieces that make a room" featured collection before the closing band.
+- Two new AI images generated (workshop scene, natural-materials still-life) and uploaded to Shopify Files.

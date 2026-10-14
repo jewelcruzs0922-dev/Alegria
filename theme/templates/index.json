@@ -3,13 +3,13 @@
     "alegria_hero": {
       "type": "alegria-hero",
       "settings": {
-        "image": "shopify://shop_images/1a7e7b3a411ea5ded6c2a3982b32b282.jpg",
-        "overlay_opacity": 55,
+        "image": "shopify://shop_images/7a6382c11322a03a679c6c4d9e99e575.jpg",
+        "overlay_opacity": 45,
         "height": "large",
         "content_position": "left",
-        "eyebrow": "The Alegria Collection",
+        "eyebrow": "",
         "heading": "Furniture for the way you live",
-        "text": "Considered pieces in natural materials — made to be lived with for years, not seasons.",
+        "text": "",
         "button_label": "Shop the collection",
         "button_link": "shopify://collections/all"
       }
@@ -78,6 +78,50 @@
         "padding_bottom": 40
       }
     },
+    "alegria_values": {
+      "type": "alegria-values",
+      "blocks": {
+        "v_materials": {
+          "type": "value",
+          "settings": {
+            "icon": "leaf",
+            "title": "Natural materials",
+            "text": "Solid oak, walnut, stone, wool, linen and brushed brass — chosen for how they age."
+          }
+        },
+        "v_craft": {
+          "type": "value",
+          "settings": {
+            "icon": "tool",
+            "title": "Made by hand",
+            "text": "Traditional joinery and replaceable parts, so a well-loved piece can be refreshed, not replaced."
+          }
+        },
+        "v_delivery": {
+          "type": "value",
+          "settings": {
+            "icon": "truck",
+            "title": "Delivered with care",
+            "text": "Free delivery on orders over $500, unpacked and placed in the room of your choice."
+          }
+        },
+        "v_guarantee": {
+          "type": "value",
+          "settings": {
+            "icon": "shield",
+            "title": "10-year guarantee",
+            "text": "We stand behind our construction for a decade — and repair what we can, for life."
+          }
+        }
+      },
+      "block_order": ["v_materials", "v_craft", "v_delivery", "v_guarantee"],
+      "settings": {
+        "eyebrow": "Why Alegria",
+        "heading": "Furniture worth keeping",
+        "intro": "Four promises shape everything we make — from the timber we choose to the way it arrives at your door.",
+        "color_scheme": "scheme-1"
+      }
+    },
     "alegria_rooms": {
       "type": "alegria-room-inspiration",
       "blocks": {
@@ -123,6 +167,57 @@
         "color_scheme": "scheme-1"
       }
     },
+    "alegria_quotes": {
+      "type": "alegria-testimonials",
+      "blocks": {
+        "q1": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "The quality is extraordinary — you can feel the joinery in every edge. It feels like it will outlive us.",
+            "author": "Mara D.",
+            "location": "Copenhagen",
+            "rating": 5
+          }
+        },
+        "q2": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Our oak table is the heart of the house now. Six years in, it looks better than the day it arrived.",
+            "author": "Thomas & Ines",
+            "location": "Lisbon",
+            "rating": 5
+          }
+        },
+        "q3": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Beautifully made and beautifully delivered. You can tell it was built by people who care.",
+            "author": "Priya N.",
+            "location": "Brooklyn",
+            "rating": 5
+          }
+        }
+      },
+      "block_order": ["q1", "q2", "q3"],
+      "settings": {
+        "eyebrow": "In their words",
+        "heading": "Loved for a lifetime",
+        "intro": "A few words from the homes our furniture now lives in.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "alegria_journal": {
+      "type": "alegria-journal",
+      "settings": {
+        "eyebrow": "The Journal",
+        "heading": "Notes on living well",
+        "intro": "Stories on materials, craft and the slow business of making rooms worth staying in.",
+        "blog": "journal",
+        "posts_to_show": 3,
+        "show_view_all": true,
+        "color_scheme": "scheme-1"
+      }
+    },
     "alegria_story": {
       "type": "rich-text",
       "blocks": {
@@ -164,7 +259,10 @@
     "alegria_craft",
     "alegria_new",
     "alegria_collections",
+    "alegria_values",
     "alegria_rooms",
+    "alegria_quotes",
+    "alegria_journal",
     "alegria_story"
   ]
 }

@@ -31,7 +31,17 @@
   #shopify-section-{{ section.id }} .alegria-hero__scrim {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(24, 22, 20, 0.05) 0%, rgba(24, 22, 20, {{ section.settings.overlay_opacity | divided_by: 100.0 }}) 100%);
+    background: linear-gradient(180deg, rgba(24, 22, 20, 0.18) 0%, rgba(24, 22, 20, {{ section.settings.overlay_opacity | divided_by: 100.0 }}) 100%);
+  }
+  #shopify-section-{{ section.id }} .alegria-hero--left .alegria-hero__scrim {
+    background:
+      linear-gradient(90deg, rgba(24, 22, 20, 0.78) 0%, rgba(24, 22, 20, 0.58) 34%, rgba(24, 22, 20, 0.32) 58%, rgba(24, 22, 20, 0.10) 78%, rgba(24, 22, 20, 0) 92%),
+      linear-gradient(180deg, rgba(24, 22, 20, 0.18) 0%, rgba(24, 22, 20, {{ section.settings.overlay_opacity | divided_by: 100.0 }}) 100%);
+  }
+  #shopify-section-{{ section.id }} .alegria-hero--right .alegria-hero__scrim {
+    background:
+      linear-gradient(270deg, rgba(24, 22, 20, 0.78) 0%, rgba(24, 22, 20, 0.58) 34%, rgba(24, 22, 20, 0.32) 58%, rgba(24, 22, 20, 0.10) 78%, rgba(24, 22, 20, 0) 92%),
+      linear-gradient(180deg, rgba(24, 22, 20, 0.18) 0%, rgba(24, 22, 20, {{ section.settings.overlay_opacity | divided_by: 100.0 }}) 100%);
   }
   #shopify-section-{{ section.id }} .alegria-hero__content {
     position: relative;

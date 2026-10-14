@@ -4,7 +4,7 @@
       "type": "alegria-hero",
       "settings": {
         "image": "shopify://shop_images/e332fbc031707c9dc7c3cbfa3ef46076.jpg",
-        "overlay_opacity": 60,
+        "overlay_opacity": 80,
         "height": "medium",
         "content_position": "left",
         "eyebrow": "Room Guides",
@@ -59,6 +59,34 @@
         "color_scheme": "scheme-1"
       }
     },
+    "rooms_shop": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Pieces that make a room",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "outline",
+        "enable_desktop_slider": false,
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "padding_top": 24,
+        "padding_bottom": 64
+      }
+    },
     "rooms_cta": {
       "type": "rich-text",
       "blocks": {
@@ -95,5 +123,5 @@
       }
     }
   },
-  "order": ["rooms_hero", "rooms_cards", "rooms_cta"]
+  "order": ["rooms_hero", "rooms_cards", "rooms_shop", "rooms_cta"]
 }

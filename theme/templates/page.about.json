@@ -4,7 +4,7 @@
       "type": "alegria-hero",
       "settings": {
         "image": "shopify://shop_images/98b43d5f597095037470c4431d4b1408.jpg",
-        "overlay_opacity": 60,
+        "overlay_opacity": 70,
         "height": "medium",
         "content_position": "left",
         "eyebrow": "Our Story",
@@ -41,6 +41,50 @@
         "padding_bottom": 24
       }
     },
+    "about_values": {
+      "type": "alegria-values",
+      "blocks": {
+        "av_materials": {
+          "type": "value",
+          "settings": {
+            "icon": "leaf",
+            "title": "Natural materials",
+            "text": "Oak, walnut, travertine, wool, linen and brass — honest materials with a long life ahead of them."
+          }
+        },
+        "av_made": {
+          "type": "value",
+          "settings": {
+            "icon": "tool",
+            "title": "Made by hand",
+            "text": "Cut, joined and finished by a small circle of makers we know by name."
+          }
+        },
+        "av_small": {
+          "type": "value",
+          "settings": {
+            "icon": "sparkle",
+            "title": "Small by design",
+            "text": "A deliberately short range, so every piece gets the attention it deserves."
+          }
+        },
+        "av_repair": {
+          "type": "value",
+          "settings": {
+            "icon": "shield",
+            "title": "Built to be repaired",
+            "text": "Replaceable parts and traditional joints mean furniture that can be renewed, not discarded."
+          }
+        }
+      },
+      "block_order": ["av_materials", "av_made", "av_small", "av_repair"],
+      "settings": {
+        "eyebrow": "What we stand for",
+        "heading": "Four principles, held quietly",
+        "intro": "We are not trying to make the most furniture. We are trying to make the right pieces — the ones you keep.",
+        "color_scheme": "scheme-1"
+      }
+    },
     "about_materials": {
       "type": "alegria-editorial",
       "settings": {
@@ -53,7 +97,55 @@
         "link": "shopify://collections/all",
         "color_scheme": "scheme-1"
       }
+    },
+    "about_makers": {
+      "type": "alegria-editorial",
+      "settings": {
+        "image": "shopify://shop_images/0e165e5af9111909787a84ec56622385.jpg",
+        "image_position": "left",
+        "eyebrow": "Our makers",
+        "heading": "A small circle of people",
+        "text": "<p>Our furniture is made in workshops where machines do the heavy lifting and hands do the rest. Each maker owns their part of the process — from milling and joinery to upholstery, weaving and finishing.</p><p>We visit often, we pay fairly, and we keep the runs small. It is slower work, and we think you can feel the difference.</p>",
+        "link_label": "Read the journal",
+        "link": "shopify://blogs/journal",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "about_cta": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Come and see the collection",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Browse the full range, or read the room guides to see how the pieces live together in a home.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop all furniture",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
     }
   },
-  "order": ["about_hero", "about_story", "about_materials"]
+  "order": ["about_hero", "about_story", "about_values", "about_materials", "about_makers", "about_cta"]
 }

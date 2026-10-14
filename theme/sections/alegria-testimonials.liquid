@@ -1,0 +1,144 @@
+<style>
+  #shopify-section-{{ section.id }} .alegria-quotes {
+    padding: var(--alegria-space-section) 0;
+  }
+  #shopify-section-{{ section.id }} .alegria-quotes__head {
+    text-align: center;
+    max-width: 56rem;
+    margin: 0 auto clamp(3.4rem, 5vw, 5.6rem);
+  }
+  #shopify-section-{{ section.id }} .alegria-quotes__head h2 {
+    font-size: clamp(3rem, 4.4vw, 4.8rem);
+    margin: 0 0 1.4rem;
+  }
+  #shopify-section-{{ section.id }} .alegria-quotes__intro {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: rgba(var(--color-foreground), 0.8);
+    margin: 0;
+  }
+  #shopify-section-{{ section.id }} .alegria-quotes__grid {
+    display: grid;
+    gap: 1.6rem;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .alegria-quotes__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  #shopify-section-{{ section.id }} .alegria-quote {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    padding: clamp(2.8rem, 3vw, 4rem);
+    background: rgba(var(--color-foreground), 0.04);
+    border: 1px solid var(--alegria-line);
+    border-radius: 2px;
+  }
+  #shopify-section-{{ section.id }} .alegria-quote__stars {
+    color: var(--alegria-gold);
+    letter-spacing: 0.3em;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  #shopify-section-{{ section.id }} .alegria-quote__text {
+    font-family: var(--font-heading-family);
+    font-size: 1.9rem;
+    line-height: 1.5;
+    margin: 0;
+    flex: 1;
+  }
+  #shopify-section-{{ section.id }} .alegria-quote__author {
+    font-size: 1.3rem;
+    letter-spacing: var(--alegria-tracking-wide);
+    text-transform: uppercase;
+    margin: 0;
+  }
+  #shopify-section-{{ section.id }} .alegria-quote__location {
+    display: block;
+    font-size: 1.2rem;
+    letter-spacing: 0.06em;
+    color: rgba(var(--color-foreground), 0.62);
+    margin-top: 0.5rem;
+  }
+  .color-scheme-2 #shopify-section-{{ section.id }} .alegria-quote,
+  .color-scheme-3 #shopify-section-{{ section.id }} .alegria-quote {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.24);
+  }
+  .color-scheme-2 #shopify-section-{{ section.id }} .alegria-quote__location,
+  .color-scheme-3 #shopify-section-{{ section.id }} .alegria-quote__location {
+    color: rgba(255, 255, 255, 0.78);
+  }
+</style>
+
+<div class="alegria-quotes color-{{ section.settings.color_scheme }}">
+  <div class="page-width">
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank -%}
+      <div class="alegria-quotes__head">
+        {%- if section.settings.eyebrow != blank -%}
+          <span class="alegria-eyebrow">{{ section.settings.eyebrow }}</span>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2>{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.intro != blank -%}
+          <p class="alegria-quotes__intro">{{ section.settings.intro }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="alegria-quotes__grid">
+      {%- for block in section.blocks -%}
+        <figure class="alegria-quote" {{ block.shopify_attributes }}>
+          <span class="alegria-quote__stars" aria-label="{{ block.settings.rating }} out of 5 stars" role="img">
+            {%- for i in (1..block.settings.rating) -%}&#9733;{%- endfor -%}
+          </span>
+          <blockquote class="alegria-quote__text">&ldquo;{{ block.settings.quote }}&rdquo;</blockquote>
+          <figcaption class="alegria-quote__author">
+            {{ block.settings.author }}
+            {%- if block.settings.location != blank -%}
+              <span class="alegria-quote__location">{{ block.settings.location }}</span>
+            {%- endif -%}
+          </figcaption>
+        </figure>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Alegria testimonials",
+  "tag": "section",
+  "class": "section-alegria-quotes",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "In their words" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Loved for a lifetime" },
+    { "type": "textarea", "id": "intro", "label": "Intro", "default": "A few words from the homes our furniture now lives in." },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        { "type": "textarea", "id": "quote", "label": "Quote", "default": "The quality is extraordinary — you can feel the joinery in every edge. It feels like it will outlive us." },
+        { "type": "text", "id": "author", "label": "Author", "default": "Mara D." },
+        { "type": "text", "id": "location", "label": "Location", "default": "Copenhagen" },
+        { "type": "range", "id": "rating", "label": "Rating", "min": 1, "max": 5, "step": 1, "default": 5 }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Alegria testimonials",
+      "blocks": [
+        { "type": "testimonial" },
+        { "type": "testimonial" },
+        { "type": "testimonial" }
+      ]
+    }
+  ]
+}
+{% endschema %}

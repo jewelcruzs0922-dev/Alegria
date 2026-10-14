@@ -11,7 +11,7 @@ This is a fictional brand — there are **no real products, customers or payment
 
 ## Highlights
 
-- **Custom editorial hero** (`sections/alegria-hero.liquid`) — full-bleed image, eyebrow, heading, CTA, with height/position/overlay controls.
+- **Custom editorial hero** (`sections/alegria-hero.liquid`) — full-bleed image, optional eyebrow/heading/text, CTA, with height/position/overlay controls and a **position-aware scrim** that keeps white type legible over bright imagery.
 - **Reusable editorial section** (`sections/alegria-editorial.liquid`) — split image/text, image side configurable.
 - **Specifications section** (`sections/alegria-product-specs.liquid`) — renders product **metafields** and a linked **metaobject** (Material) on the product page, handling missing values gracefully.
 - **16 products across 5 collections** with real options/variants, variant-aware pricing and images.
@@ -24,6 +24,9 @@ This is a fictional brand — there are **no real products, customers or payment
 - **Native collection filtering & sorting** (Shopify Search & Discovery) with a mobile filter drawer.
 - **Ajax cart drawer** (Dawn) — add, update, remove, live count and subtotal.
 - **Journal** blog with three editorial articles.
+- **Values section** (`sections/alegria-values.liquid`) — brand promises with line icons.
+- **Testimonials section** (`sections/alegria-testimonials.liquid`) — starred customer quotes.
+- **Journal section** (`sections/alegria-journal.liquid`) — the latest posts pulled from the Journal blog.
 - **Polished details:** a branded footer (Explore menu + brand statement), an on-brand 404 page, and a smooth card cross-fade on hover (lifestyle image, 1s).
 - **Brand design system** — a charcoal-led palette (charcoal ≈60% / crimson ≈30% / gold ≈10%): Charcoal `#232323`, Crimson `#CE2029`, Metallic Gold `#D4AF37`; Playfair Display headings + Jost body.
 - **AI-generated imagery** (Gemini) uploaded to Shopify Files.
@@ -31,6 +34,10 @@ This is a fictional brand — there are **no real products, customers or payment
 | Product page | Mobile |
 | --- | --- |
 | ![Product](docs/screenshots/product-desktop.png) | ![Mobile](docs/screenshots/home-mobile.png) |
+
+| Our Story | Room Guides |
+| --- | --- |
+| ![About](docs/screenshots/about-desktop.png) | ![Rooms](docs/screenshots/rooms-desktop.png) |
 
 ## Catalog
 
@@ -58,7 +65,7 @@ Products use real Shopify variants (Upholstery / Size / Finish / Colour …) wit
 theme/
   layout/        theme.liquid (brand CSS injected after base.css)
   templates/     index.json, product.json, collection.json, blog.json, article.json, …
-  sections/      alegria-hero, alegria-editorial, alegria-product-specs (+ Dawn sections)
+  sections/      alegria-hero, alegria-editorial, alegria-values, alegria-testimonials, alegria-journal, alegria-product-specs (+ Dawn sections)
   snippets/      Dawn snippets (+ quantity-input label fix)
   assets/        alegria.css (brand layer) + Dawn assets
   config/        settings_schema.json, settings_data.json (5 brand colour schemes)
