@@ -159,3 +159,8 @@ Crimson `#CE2029`, Charcoal `#232323`, Metallic Gold `#D4AF37` on an ivory base 
   - **Collections index** — hero.
   - **Cart** and **Search** were already on-brand (themed via `alegria.css`).
 - **Removed duplicate H1s** on the blog/collections pages where a hero provides the page title.
+
+## Polish pass (round 9)
+
+- **Brand logo added:** the Alegria gold ribbon-monogram lockup was supplied as a transparent PNG and added as `assets/alegria-logo.png`, now used in the **header**, the **footer brand column** and the **password header** (rendered from theme assets, so no Shopify Files/admin needed).
+- Cropped the **monogram** (`assets/alegria-logo-mark.png`) and built a matching **favicon** from it (`assets/alegria-favicon.png` — the mark on charcoal), wired in `layout/theme.liquid`. Assets were downscaled to keep the theme light.

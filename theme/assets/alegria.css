@@ -127,6 +127,18 @@ h5,
   padding-bottom: 1.4rem;
 }
 
+.header__heading-logo--alegria {
+  height: 5.2rem;
+  width: auto;
+  display: block;
+}
+
+@media screen and (max-width: 749px) {
+  .header__heading-logo--alegria {
+    height: 3.6rem;
+  }
+}
+
 .header__menu-item {
   font-size: 1.3rem;
   letter-spacing: 0.06em;
@@ -298,6 +310,16 @@ h5,
   line-height: 1.6;
   color: rgba(245, 241, 234, 0.7);
   max-width: 32ch;
+}
+
+.footer-block__brand-info .footer-block__logo {
+  margin-bottom: 1.6rem;
+}
+
+.footer-block__brand-info .footer-block__logo img {
+  height: 5.2rem;
+  width: auto;
+  display: block;
 }
 
 /* Footer links — no underline; gold on hover */

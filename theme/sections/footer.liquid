@@ -121,6 +121,16 @@
                               width: settings.brand_image_width
                           }}
                         </div>
+                      {%- else -%}
+                        <div class="footer-block__image-wrapper footer-block__logo">
+                          <img
+                            src="{{ 'alegria-logo.png' | asset_url }}"
+                            alt="{{ shop.name | escape }}"
+                            width="1470"
+                            height="922"
+                            loading="lazy"
+                          >
+                        </div>
                       {%- endif -%}
                       {%- if settings.brand_headline != blank -%}
                         <h2 class="footer-block__heading rte">{{ settings.brand_headline }}</h2>
