@@ -131,3 +131,11 @@ Crimson `#CE2029`, Charcoal `#232323`, Metallic Gold `#D4AF37` on an ivory base 
 - **About expanded:** added a "four principles" row and an **"Our makers"** editorial (new workshop image) plus a closing call to action.
 - **Rooms expanded:** added a "Pieces that make a room" featured collection before the closing band.
 - Two new AI images generated (workshop scene, natural-materials still-life) and uploaded to Shopify Files.
+
+## Polish pass (round 6)
+
+- **Fixed card underlines:** the new components wrap their content in bare `<a>` elements, which picked up the browser's **default link underline** (Dawn only resets its own `.full-unstyled-link`). Added an explicit `text-decoration: none` reset for the hero CTA, editorial links, room cards and journal posts; the intended gold border-bottom links remain.
+- **Branded password page:** built `sections/alegria-password` — a full-screen, on-brand "opening soon" page with email capture — and wired it into `templates/password.json` and `layout/password.liquid` (brand CSS now loads on the password layout).
+  - **Platform caveat:** on **development stores Shopify always serves its own default password page** to visitors; the themed page is only shown on a paid plan (or in the theme editor). Kept as correct, portfolio-worthy theme code and documented.
+- **Mobile verified:** homepage and product page checked at **390px** — `scrollWidth == clientWidth` (no horizontal overflow); hero, grids and stacked sections all render cleanly.
+- **Search & collection filtering** confirmed present (Availability + Price facets + sort). Adding metafield / Product-type / Vendor filters requires the **Search & Discovery** app (manual step in the admin).

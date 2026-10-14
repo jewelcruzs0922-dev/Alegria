@@ -102,6 +102,7 @@ shopify theme push --theme "Alegria" --store alegria-desoau8q.myshopify.com
 ## Known limitations
 
 - Development store — storefront is **password-protected**; checkout uses Shopify's **test gateway** (no real payments).
+  - On a **development store Shopify always serves its own default password page** to visitors; the theme's branded password page (`sections/alegria-password.liquid`) is only shown on a paid plan (or in the theme editor).
 - Performance is bounded by Shopify's platform JavaScript.
 - The header uses a **text wordmark** (the shop name in Playfair Display) rather than an image logo, to keep the typeface consistent with the brand.
 - The storefront has no customer accounts content beyond Dawn defaults.
